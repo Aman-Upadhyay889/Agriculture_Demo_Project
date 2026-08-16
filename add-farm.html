@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Add Farm | The Root of Life</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+
+    <style>
+
+        .add-farm-page {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .form-card {
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 5px 25px rgba(30,60,40,0.05);
+        }
+
+        .form-header {
+            margin-bottom: 30px;
+        }
+
+        .form-header h2 {
+            font-size: 26px;
+            margin-top: 8px;
+        }
+
+        .form-header p {
+            color: #899388;
+            font-size: 13px;
+            margin-top: 7px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            font-size: 12px;
+            font-weight: bold;
+            color: #405743;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 13px 15px;
+            border: 1px solid #dfe6da;
+            border-radius: 10px;
+            font-size: 13px;
+            outline: none;
+            background: #fafcf8;
+            color: #304934;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #6d9c47;
+            background: white;
+        }
+
+        .submit-area {
+            margin-top: 30px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+        }
+
+        .cancel-btn,
+        .save-btn {
+            border: none;
+            padding: 13px 22px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .cancel-btn {
+            background: #eef1ec;
+            color: #627060;
+        }
+
+        .save-btn {
+            background: #4f8b42;
+            color: white;
+        }
+
+        .save-btn:hover {
+            background: #386f32;
+        }
+
+        .success-message {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: #edf7e8;
+            color: #4d8040;
+            border-radius: 10px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 650px) {
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: auto;
+            }
+
+            .form-card {
+                padding: 22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <main class="main-content"
+          style="margin-left:0; min-height:100vh;">
+
+        <div class="add-farm-page">
+
+            <div class="form-card">
+
+                <div class="form-header">
+
+                    <span class="section-label">
+                        FARM MANAGEMENT
+                    </span>
+
+                    <h2>🌾 Add Your Farm</h2>
+
+                    <p>
+                        Enter your farm details to begin
+                        smart monitoring.
+                    </p>
+
+                </div>
+
+
+                <form id="farmForm">
+
+                    <div class="form-grid">
+
+
+                        <!-- FARM NAME -->
+
+                        <div class="form-group">
+
+                            <label for="farmName">
+                                Farm Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="farmName"
+                                placeholder="e.g. Green Farm"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- LOCATION -->
+
+                        <div class="form-group">
+
+                            <label for="location">
+                                Location
+                            </label>
+
+                            <input
+                                type="text"
+                                id="location"
+                                placeholder="e.g. Bhubaneswar, Odisha"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- FARM AREA -->
+
+                        <div class="form-group">
+
+                            <label for="area">
+                                Farm Area
+                            </label>
+
+                            <input
+                                type="number"
+                                id="area"
+                                placeholder="e.g. 5.5"
+                                min="0"
+                                step="0.1"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- UNIT -->
+
+                        <div class="form-group">
+
+                            <label for="unit">
+                                Area Unit
+                            </label>
+
+                            <select id="unit">
+
+                                <option value="acres">
+                                    Acres
+                                </option>
+
+                                <option value="hectares">
+                                    Hectares
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- CROP -->
+
+                        <div class="form-group">
+
+                            <label for="crop">
+                                Crop
+                            </label>
+
+                            <select id="crop">
+
+                                <option value="">
+                                    Select Crop
+                                </option>
+
+                                <option value="Rice">
+                                    Rice
+                                </option>
+
+                                <option value="Wheat">
+                                    Wheat
+                                </option>
+
+                                <option value="Maize">
+                                    Maize
+                                </option>
+
+                                <option value="Tomato">
+                                    Tomato
+                                </option>
+
+                                <option value="Potato">
+                                    Potato
+                                </option>
+
+                                <option value="Cotton">
+                                    Cotton
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- SOIL -->
+
+                        <div class="form-group">
+
+                            <label for="soil">
+                                Soil Type
+                            </label>
+
+                            <select id="soil">
+
+                                <option value="">
+                                    Select Soil
+                                </option>
+
+                                <option value="Loamy">
+                                    Loamy
+                                </option>
+
+                                <option value="Clay">
+                                    Clay
+                                </option>
+
+                                <option value="Sandy">
+                                    Sandy
+                                </option>
+
+                                <option value="Silty">
+                                    Silty
+                                </option>
+
+                                <option value="Black Soil">
+                                    Black Soil
+                                </option>
+
+                                <option value="Red Soil">
+                                    Red Soil
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- SOWING DATE -->
+
+                        <div class="form-group full">
+
+                            <label for="sowingDate">
+                                Sowing Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="sowingDate"
+                                required
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- BUTTONS -->
+
+                    <div class="submit-area">
+
+                        <button
+                            type="button"
+                            class="cancel-btn"
+                            onclick="window.location.href='dashboard.html'">
+
+                            Cancel
+
+                        </button>
+
+
+                        <button
+                            type="submit"
+                            class="save-btn">
+
+                            + Add Farm
+
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="success-message"
+                        id="successMessage">
+
+                        ✅ Farm added successfully!
+                        Your farm is ready for smart monitoring.
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        document
+            .getElementById("farmForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                const farmName =
+                    document.getElementById("farmName").value;
+
+                const crop =
+                    document.getElementById("crop").value;
+
+                const successMessage =
+                    document.getElementById("successMessage");
+
+
+                successMessage.style.display = "block";
+
+
+                console.log(
+                    "Farm Name:",
+                    farmName
+                );
+
+                console.log(
+                    "Crop:",
+                    crop
+                );
+
+            });
+
+    </script>
+
+</body>
+
+</html>

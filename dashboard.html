@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Farm Dashboard | The Root of Life</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">🌱</div>
+
+            <div>
+                <h2>Root of Life</h2>
+                <span>Smart Agriculture</span>
+            </div>
+        </div>
+
+
+        <!-- NAVIGATION -->
+        <nav class="navigation">
+
+            <a href="#" class="nav-item active" onclick="showSection('dashboard', this)">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="#" class="nav-item" onclick="showSection('monitoring', this)">
+                <span>🌱</span>
+                Farm Monitoring
+                
+            </a>
+             <a href="add-farm.html" class="nav-item">
+                 <span>➕</span>
+                  Add Farm
+            </a>
+
+            <a href="#" class="nav-item" onclick="showSection('irrigation', this)">
+                <span>💧</span>
+                Irrigation
+            </a>
+
+            <a href="#" class="nav-item" onclick="showSection('recommendations', this)">
+                <span>🤖</span>
+                Smart Advice
+            </a>
+
+            <a href="#" class="nav-item" onclick="showSection('history', this)">
+                <span>📊</span>
+                History
+            </a>
+
+        </nav>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <div class="farm-mini-card">
+
+                <div class="mini-icon">🌾</div>
+
+                <div>
+                    <strong>Green Farm</strong>
+                    <small>5.5 Acres</small>
+                </div>
+
+            </div>
+
+            <a href="index.html" class="back-home">
+                ← Back to Home
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+                <p class="date-text" id="currentDate"></p>
+                <h1>Good Morning, Farmer! 🌱</h1>
+            </div>
+
+            <div class="profile">
+
+                <div class="notification">
+                    🔔
+                    <span class="notification-dot"></span>
+                </div>
+
+                <div class="profile-avatar">
+                    RK
+                </div>
+
+                <div class="profile-info">
+                    <strong>Rahul Kumar</strong>
+                    <small>Farm Owner</small>
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ========================= -->
+        <!-- DASHBOARD SECTION -->
+        <!-- ========================= -->
+
+        <section id="dashboard" class="page-section active-section">
+
+            <!-- FARM HEADER -->
+
+            <div class="farm-header">
+
+                <div>
+                    <p class="section-label">CURRENT FARM</p>
+
+                    <h2>🌾 Green Farm</h2>
+
+                    <p class="location">
+                        📍 Bhubaneswar, Odisha &nbsp; • &nbsp; 5.5 Acres
+                    </p>
+                </div>
+
+                <div class="farm-status">
+                    <span class="status-circle"></span>
+                    Farm Healthy
+                </div>
+
+            </div>
+
+
+
+            <!-- SENSOR CARDS -->
+
+            <div class="sensor-grid">
+
+                <!-- Temperature -->
+
+                <div class="sensor-card temperature-card">
+
+                    <div class="sensor-top">
+
+                        <div class="sensor-icon">🌡️</div>
+
+                        <span class="trend up">
+                            ↑ 2.4%
+                        </span>
+
+                    </div>
+
+                    <p>Temperature</p>
+
+                    <h3>
+                        <span id="temperatureValue">32</span>
+                        <small>°C</small>
+                    </h3>
+
+                    <span class="sensor-status">
+                        Normal range
+                    </span>
+
+                </div>
+
+
+
+                <!-- Humidity -->
+
+                <div class="sensor-card humidity-card">
+
+                    <div class="sensor-top">
+
+                        <div class="sensor-icon">☁️</div>
+
+                        <span class="trend down">
+                            ↓ 1.2%
+                        </span>
+
+                    </div>
+
+                    <p>Humidity</p>
+
+                    <h3>
+                        <span id="humidityValue">58</span>
+                        <small>%</small>
+                    </h3>
+
+                    <span class="sensor-status">
+                        Good condition
+                    </span>
+
+                </div>
+
+
+
+                <!-- Soil Moisture -->
+
+                <div class="sensor-card moisture-card">
+
+                    <div class="sensor-top">
+
+                        <div class="sensor-icon">💧</div>
+
+                        <span class="trend up">
+                            ↑ 4.6%
+                        </span>
+
+                    </div>
+
+                    <p>Soil Moisture</p>
+
+                    <h3>
+                        <span id="moistureValue">64</span>
+                        <small>%</small>
+                    </h3>
+
+                    <span class="sensor-status">
+                        Moisture sufficient
+                    </span>
+
+                </div>
+
+
+
+                <!-- Crop -->
+
+                <div class="sensor-card crop-card">
+
+                    <div class="sensor-top">
+
+                        <div class="sensor-icon">🌾</div>
+
+                        <span class="crop-season">
+                            Kharif
+                        </span>
+
+                    </div>
+
+                    <p>Current Crop</p>
+
+                    <h3 class="crop-name">
+                        Rice
+                    </h3>
+
+                    <span class="sensor-status">
+                        Growing well
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- LOWER DASHBOARD -->
+
+            <div class="dashboard-grid">
+
+                <!-- FARM CONDITION -->
+
+                <div class="panel farm-condition">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <span class="section-label">FIELD CONDITION</span>
+                            <h2>Today's Overview</h2>
+                        </div>
+
+                        <span class="healthy-badge">
+                            ● Healthy
+                        </span>
+
+                    </div>
+
+
+                    <div class="condition-content">
+
+                        <div class="plant-visual">
+
+                            <div class="plant-circle">
+                                🌱
+                            </div>
+
+                            <h3>Crop Health</h3>
+
+                            <strong>Good</strong>
+
+                            <p>
+                                Your crop is currently
+                                growing under healthy conditions.
+                            </p>
+
+                        </div>
+
+
+                        <div class="condition-list">
+
+                            <div class="condition-item">
+                                <span>☀️</span>
+
+                                <div>
+                                    <strong>Temperature</strong>
+                                    <small>Ideal for rice</small>
+                                </div>
+
+                                <b>32°C</b>
+                            </div>
+
+
+                            <div class="condition-item">
+                                <span>💧</span>
+
+                                <div>
+                                    <strong>Soil Moisture</strong>
+                                    <small>Sufficient water</small>
+                                </div>
+
+                                <b>64%</b>
+                            </div>
+
+
+                            <div class="condition-item">
+                                <span>🌿</span>
+
+                                <div>
+                                    <strong>Crop Stage</strong>
+                                    <small>Vegetative growth</small>
+                                </div>
+
+                                <b>Good</b>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SMART ADVICE -->
+
+                <div class="panel advice-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <span class="section-label">SMART ADVICE</span>
+                            <h2>Today's Recommendation</h2>
+                        </div>
+
+                        <span class="ai-badge">
+                            ✦ AI
+                        </span>
+
+                    </div>
+
+
+                    <div class="advice-box">
+
+                        <div class="advice-icon">
+                            💧
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                No irrigation needed
+                            </h3>
+
+                            <p>
+                                Soil moisture is currently
+                                at 64%, which is sufficient
+                                for your rice crop.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="advice-footer">
+
+                        <span>
+                            Next check
+                        </span>
+
+                        <strong>
+                            In 2 hours
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- QUICK ACTIONS -->
+
+            <div class="quick-section">
+
+                <div class="panel-header">
+
+                    <div>
+                        <span class="section-label">QUICK ACTIONS</span>
+                        <h2>Farm Management</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="quick-grid">
+
+                    <button onclick="showSection('monitoring')">
+                        <span>🌱</span>
+                        <strong>Monitor Farm</strong>
+                        <small>View live conditions</small>
+                    </button>
+
+                    <button onclick="showSection('irrigation')">
+                        <span>💧</span>
+                        <strong>Check Irrigation</strong>
+                        <small>Manage water needs</small>
+                    </button>
+
+                    <button onclick="showSection('recommendations')">
+                        <span>🤖</span>
+                        <strong>Smart Advice</strong>
+                        <small>View recommendations</small>
+                    </button>
+
+                    <button onclick="showSection('history')">
+                        <span>📊</span>
+                        <strong>View History</strong>
+                        <small>Analyze past data</small>
+                    </button>
+                    
+                    <button onclick="window.location.href='add-farm.html'">
+
+                       <span>🌾</span>
+
+                      <strong>Add New Farm</strong>
+
+                       <small>Create a new farm profile</small>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- FARM MONITORING -->
+        <!-- ========================= -->
+
+        <section id="monitoring" class="page-section">
+
+            <div class="page-title">
+
+                <span class="section-label">
+                    LIVE DATA
+                </span>
+
+                <h2>Farm Monitoring</h2>
+
+                <p>
+                    Monitor the current environmental
+                    conditions of your field.
+                </p>
+
+            </div>
+
+
+            <div class="monitor-grid">
+
+                <div class="large-monitor-card">
+
+                    <span>🌡️</span>
+
+                    <p>Temperature</p>
+
+                    <strong>32°C</strong>
+
+                    <small>Normal</small>
+
+                </div>
+
+
+                <div class="large-monitor-card">
+
+                    <span>💧</span>
+
+                    <p>Soil Moisture</p>
+
+                    <strong>64%</strong>
+
+                    <small>Good</small>
+
+                </div>
+
+
+                <div class="large-monitor-card">
+
+                    <span>☁️</span>
+
+                    <p>Humidity</p>
+
+                    <strong>58%</strong>
+
+                    <small>Good</small>
+
+                </div>
+
+            </div>
+
+
+            <div class="data-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <span class="section-label">
+                            SENSOR STATUS
+                        </span>
+
+                        <h2>Connected Sensors</h2>
+                    </div>
+
+                    <span class="connected">
+                        ● All systems connected
+                    </span>
+
+                </div>
+
+
+                <div class="sensor-table">
+
+                    <div class="table-row table-heading">
+                        <span>Sensor</span>
+                        <span>Location</span>
+                        <span>Reading</span>
+                        <span>Status</span>
+                    </div>
+
+
+                    <div class="table-row">
+                        <span>🌡️ Temperature Sensor</span>
+                        <span>Field A</span>
+                        <span>32°C</span>
+                        <span class="good">Normal</span>
+                    </div>
+
+
+                    <div class="table-row">
+                        <span>💧 Soil Moisture Sensor</span>
+                        <span>Field A</span>
+                        <span>64%</span>
+                        <span class="good">Good</span>
+                    </div>
+
+
+                    <div class="table-row">
+                        <span>☁️ Humidity Sensor</span>
+                        <span>Field A</span>
+                        <span>58%</span>
+                        <span class="good">Good</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- IRRIGATION -->
+        <!-- ========================= -->
+
+        <section id="irrigation" class="page-section">
+
+            <div class="page-title">
+
+                <span class="section-label">
+                    WATER MANAGEMENT
+                </span>
+
+                <h2>Irrigation</h2>
+
+                <p>
+                    Smart irrigation recommendations
+                    based on soil moisture.
+                </p>
+
+            </div>
+
+
+            <div class="irrigation-card">
+
+                <div class="water-circle">
+                    💧
+                </div>
+
+                <h2>No Irrigation Required</h2>
+
+                <p>
+                    Current soil moisture is
+                    <strong>64%</strong>.
+                    The field has sufficient moisture
+                    for the current crop.
+                </p>
+
+                <div class="moisture-bar">
+
+                    <div class="moisture-fill"></div>
+
+                </div>
+
+                <div class="moisture-labels">
+                    <span>Dry</span>
+                    <span>Optimal</span>
+                    <span>Wet</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- SMART RECOMMENDATIONS -->
+        <!-- ========================= -->
+
+        <section id="recommendations" class="page-section">
+
+            <div class="page-title">
+
+                <span class="section-label">
+                    INTELLIGENT ANALYSIS
+                </span>
+
+                <h2>Smart Advice</h2>
+
+                <p>
+                    Recommendations generated from
+                    current farm conditions.
+                </p>
+
+            </div>
+
+
+            <div class="recommendation-grid">
+
+                <div class="recommendation-card green">
+
+                    <span>💧</span>
+
+                    <h3>
+                        Irrigation
+                    </h3>
+
+                    <p>
+                        No irrigation required at
+                        the current moisture level.
+                    </p>
+
+                </div>
+
+
+                <div class="recommendation-card yellow">
+
+                    <span>☀️</span>
+
+                    <h3>
+                        Temperature
+                    </h3>
+
+                    <p>
+                        Temperature is suitable
+                        for the current rice crop.
+                    </p>
+
+                </div>
+
+
+                <div class="recommendation-card blue">
+
+                    <span>🌱</span>
+
+                    <h3>
+                        Crop Health
+                    </h3>
+
+                    <p>
+                        Crop conditions appear
+                        healthy based on current data.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- HISTORY -->
+        <!-- ========================= -->
+
+        <section id="history" class="page-section">
+
+            <div class="page-title">
+
+                <span class="section-label">
+                    FARM DATA
+                </span>
+
+                <h2>History & Analytics</h2>
+
+                <p>
+                    Previous environmental readings
+                    from your farm.
+                </p>
+
+            </div>
+
+
+            <div class="history-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <span class="section-label">
+                            RECENT READINGS
+                        </span>
+
+                        <h2>Sensor History</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="sensor-table">
+
+                    <div class="table-row table-heading">
+                        <span>Date</span>
+                        <span>Temperature</span>
+                        <span>Humidity</span>
+                        <span>Moisture</span>
+                    </div>
+
+
+                    <div class="table-row">
+                        <span>Today, 10:00 AM</span>
+                        <span>32°C</span>
+                        <span>58%</span>
+                        <span>64%</span>
+                    </div>
+
+
+                    <div class="table-row">
+                        <span>Today, 08:00 AM</span>
+                        <span>29°C</span>
+                        <span>61%</span>
+                        <span>67%</span>
+                    </div>
+
+
+                    <div class="table-row">
+                        <span>Yesterday, 06:00 PM</span>
+                        <span>31°C</span>
+                        <span>59%</span>
+                        <span>70%</span>
+                    </div>
+
+
+                    <div class="table-row">
+                        <span>Yesterday, 02:00 PM</span>
+                        <span>34°C</span>
+                        <span>54%</span>
+                        <span>62%</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

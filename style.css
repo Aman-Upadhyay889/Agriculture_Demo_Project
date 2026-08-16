@@ -1,0 +1,398 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f8ee;
+    color: #193d25;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   MAIN HERO
+========================= */
+
+.hero {
+    min-height: 82vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 9%;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.hero-content {
+    width: 48%;
+    z-index: 5;
+}
+
+.small-title {
+    color: #719b3c;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(60px, 7vw, 105px);
+    line-height: 0.92;
+    font-weight: 700;
+    color: #173c24;
+    letter-spacing: -4px;
+}
+
+h1 span {
+    color: #3d8b3d;
+}
+
+.description {
+    max-width: 480px;
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #65715f;
+}
+
+.explore-btn {
+    margin-top: 35px;
+    padding: 15px 27px;
+    border: none;
+    border-radius: 30px;
+    background: #3d8b3d;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    background: #286b32;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(61, 139, 61, 0.25);
+}
+
+
+/* =========================
+   FARM ILLUSTRATION
+========================= */
+
+.farm-illustration {
+    width: 48%;
+    height: 500px;
+    position: relative;
+}
+
+
+/* Sun */
+
+.sun {
+    position: absolute;
+    width: 115px;
+    height: 115px;
+    background: #e5bd58;
+    border-radius: 50%;
+    top: 30px;
+    right: 80px;
+    box-shadow: 0 0 50px rgba(229, 189, 88, 0.3);
+}
+
+
+/* Clouds */
+
+.cloud {
+    position: absolute;
+    width: 100px;
+    height: 28px;
+    background: white;
+    border-radius: 30px;
+    opacity: 0.75;
+}
+
+.cloud::before,
+.cloud::after {
+    content: "";
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+}
+
+.cloud::before {
+    width: 40px;
+    height: 40px;
+    left: 20px;
+    bottom: 5px;
+}
+
+.cloud::after {
+    width: 50px;
+    height: 50px;
+    right: 15px;
+    bottom: 2px;
+}
+
+.cloud-one {
+    top: 95px;
+    left: 20px;
+}
+
+.cloud-two {
+    top: 170px;
+    right: 30px;
+    transform: scale(0.7);
+}
+
+
+/* =========================
+   TREE
+========================= */
+
+.tree {
+    position: absolute;
+    left: 100px;
+    bottom: 145px;
+    width: 150px;
+    height: 300px;
+}
+
+.trunk {
+    position: absolute;
+    width: 35px;
+    height: 175px;
+    background: #79543a;
+    bottom: 0;
+    left: 57px;
+    border-radius: 10px 10px 5px 5px;
+}
+
+.tree-top {
+    position: absolute;
+    background: #4f8d3d;
+    border-radius: 50%;
+}
+
+.top-one {
+    width: 130px;
+    height: 130px;
+    left: 5px;
+    top: 20px;
+}
+
+.top-two {
+    width: 105px;
+    height: 105px;
+    left: 50px;
+    top: 0;
+}
+
+.top-three {
+    width: 90px;
+    height: 90px;
+    left: 0;
+    top: 65px;
+}
+
+
+/* =========================
+   CROPS
+========================= */
+
+.crop {
+    position: absolute;
+    bottom: 125px;
+    width: 45px;
+    height: 110px;
+}
+
+.crop-one {
+    right: 160px;
+}
+
+.crop-two {
+    right: 105px;
+    bottom: 115px;
+    transform: scale(0.8);
+}
+
+.crop-three {
+    right: 215px;
+    bottom: 120px;
+    transform: scale(0.7);
+}
+
+.stem {
+    position: absolute;
+    height: 90px;
+    width: 6px;
+    background: #4d7837;
+    bottom: 0;
+    left: 20px;
+    border-radius: 10px;
+}
+
+.leaf {
+    position: absolute;
+    width: 35px;
+    height: 18px;
+    background: #6ea844;
+    border-radius: 100% 0 100% 0;
+}
+
+.leaf.left {
+    left: -3px;
+    bottom: 45px;
+    transform: rotate(-25deg);
+}
+
+.leaf.right {
+    left: 20px;
+    bottom: 62px;
+    transform: rotate(25deg) scaleX(-1);
+}
+
+
+/* =========================
+   SOIL
+========================= */
+
+.soil {
+    position: absolute;
+    bottom: 65px;
+    left: -30px;
+    width: 600px;
+    height: 110px;
+    background: #795536;
+    border-radius: 50% 50% 0 0;
+    transform: rotate(-2deg);
+    overflow: hidden;
+}
+
+.soil::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    background: #67452f;
+}
+
+.soil-line {
+    position: absolute;
+    width: 90px;
+    height: 3px;
+    background: #4f3727;
+    left: 100px;
+    top: 40px;
+    transform: rotate(10deg);
+}
+
+.line-two {
+    left: 280px;
+    top: 55px;
+}
+
+.line-three {
+    left: 420px;
+    top: 35px;
+}
+
+
+/* =========================
+   BOTTOM SECTION
+========================= */
+
+.bottom-section {
+    min-height: 18vh;
+    background: #193d25;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 9%;
+}
+
+.bottom-text {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.line {
+    display: block;
+    width: 55px;
+    height: 3px;
+    background: #92b95c;
+}
+
+.bottom-text h2 {
+    font-size: 34px;
+    color: #dcebbd;
+}
+
+.bottom-text p {
+    color: #b8c8b2;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.leaf-decoration {
+    font-size: 55px;
+    transform: rotate(-20deg);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+    .hero {
+        flex-direction: column;
+        padding-top: 50px;
+    }
+
+    .hero-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .farm-illustration {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .bottom-section {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .bottom-text {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .bottom-text p {
+        margin-left: 0;
+    }
+
+    .leaf-decoration {
+        display: none;
+    }
+}
