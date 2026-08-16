@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irrigation | The Root of Life</title>
+    <link rel="stylesheet" href="dashboard.css">
+
+    <style>
+        .irrigation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .water-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #e1e9df;
+        }
+
+        .water-value {
+            font-size: 45px;
+            font-weight: bold;
+            color: #238636;
+            margin: 15px 0;
+        }
+
+        .progress {
+            height: 12px;
+            background: #e5eee3;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 68%;
+            background: #238636;
+            border-radius: 20px;
+        }
+
+        .irrigation-status {
+            display: inline-block;
+            background: #e8f5e5;
+            color: #237b32;
+            padding: 7px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .schedule {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #e1e9df;
+            margin-top: 20px;
+        }
+
+        .schedule-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #edf1ec;
+        }
+
+        .water-saving {
+            margin-top: 20px;
+            background: #193322;
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .water-saving span {
+            color: #aee3af;
+            font-weight: bold;
+        }
+
+        @media(max-width:700px) {
+            .irrigation-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="logo">🌱 The Root of Life</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+    </nav>
+</header>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar">
+        <h3>Smart Farm</h3>
+
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="add-farm.html">🌱 Add Farm</a>
+        <a href="irrigation.html" class="side-active">💧 Irrigation</a>
+        <a href="smart-advice.html">🤖 Smart Advice</a>
+        <a href="history.html">📈 History</a>
+    </aside>
+
+    <main class="main-content">
+
+        <p class="small-title">WATER MANAGEMENT</p>
+
+        <h1>Irrigation Monitor</h1>
+
+        <p style="color:#68746b; margin-bottom:30px;">
+            Use soil moisture data to make smarter irrigation decisions.
+        </p>
+
+        <div class="irrigation-grid">
+
+            <div class="water-card">
+                <h2>💧 Soil Moisture</h2>
+
+                <div class="water-value">68%</div>
+
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+
+                <p style="margin-top:15px;">
+                    Current moisture level is suitable for the rice crop.
+                </p>
+
+                <span class="irrigation-status">
+                    ✓ Optimal
+                </span>
+            </div>
+
+            <div class="water-card">
+                <h2>🚿 Irrigation Status</h2>
+
+                <div class="water-value" style="font-size:32px;">
+                    Scheduled
+                </div>
+
+                <p>
+                    Next irrigation is recommended around
+                    <strong>6:00 PM</strong>.
+                </p>
+
+                <span class="irrigation-status">
+                    Smart Recommendation
+                </span>
+            </div>
+
+        </div>
+
+        <div class="schedule">
+
+            <h2>Today's Irrigation Schedule</h2>
+
+            <div class="schedule-row">
+                <span>🌅 Morning</span>
+                <strong>Completed</strong>
+            </div>
+
+            <div class="schedule-row">
+                <span>☀️ Afternoon</span>
+                <strong>Not Required</strong>
+            </div>
+
+            <div class="schedule-row">
+                <span>🌙 Evening</span>
+                <strong>6:00 PM</strong>
+            </div>
+
+        </div>
+
+        <div class="water-saving">
+
+            <h2>🌍 Smart Water Insight</h2>
+
+            <p>
+                Based on current soil moisture, avoiding unnecessary
+                irrigation could save approximately
+                <span>20–25% water</span> compared with fixed-schedule
+                irrigation.
+            </p>
+
+        </div>
+
+    </main>
+</div>
+
+</body>
+</html>

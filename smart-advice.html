@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Advice | The Root of Life</title>
+    <link rel="stylesheet" href="dashboard.css">
+
+    <style>
+        .advice-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .advice-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #e1e9df;
+            border-left: 5px solid #238636;
+        }
+
+        .advice-icon {
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+
+        .priority {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 5px 10px;
+            background: #e8f5e5;
+            color: #237b32;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .ai-box {
+            margin-top: 25px;
+            padding: 30px;
+            background: #193322;
+            color: white;
+            border-radius: 14px;
+        }
+
+        .ai-box h2 {
+            color: #bde7be;
+        }
+
+        .ai-box p {
+            color: #d2ded3;
+        }
+
+        @media(max-width:700px) {
+            .advice-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="logo">🌱 The Root of Life</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+    </nav>
+</header>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar">
+        <h3>Smart Farm</h3>
+
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="add-farm.html">🌱 Add Farm</a>
+        <a href="irrigation.html">💧 Irrigation</a>
+        <a href="smart-advice.html" class="side-active">🤖 Smart Advice</a>
+        <a href="history.html">📈 History</a>
+    </aside>
+
+    <main class="main-content">
+
+        <p class="small-title">AI-POWERED FARMING</p>
+
+        <h1>Smart Advice 🤖</h1>
+
+        <p style="color:#68746b; margin-bottom:30px;">
+            Recommendations based on your farm conditions.
+        </p>
+
+        <div class="advice-grid">
+
+            <div class="advice-card">
+
+                <div class="advice-icon">💧</div>
+
+                <h2>Optimize Irrigation</h2>
+
+                <p>
+                    Soil moisture is currently 68%.
+                    Irrigation can be scheduled for the evening
+                    instead of watering immediately.
+                </p>
+
+                <span class="priority">HIGH PRIORITY</span>
+
+            </div>
+
+            <div class="advice-card">
+
+                <div class="advice-icon">🌱</div>
+
+                <h2>Monitor Crop Growth</h2>
+
+                <p>
+                    Your rice crop is currently in an active growth
+                    stage. Regular field monitoring is recommended.
+                </p>
+
+                <span class="priority">MEDIUM PRIORITY</span>
+
+            </div>
+
+            <div class="advice-card">
+
+                <div class="advice-icon">🌦️</div>
+
+                <h2>Weather Awareness</h2>
+
+                <p>
+                    Cloudy conditions are expected. Consider current
+                    weather before planning irrigation.
+                </p>
+
+                <span class="priority">MEDIUM PRIORITY</span>
+
+            </div>
+
+            <div class="advice-card">
+
+                <div class="advice-icon">🌍</div>
+
+                <h2>Improve Soil Health</h2>
+
+                <p>
+                    Consider crop rotation and organic matter
+                    management to maintain long-term soil quality.
+                </p>
+
+                <span class="priority">LOW PRIORITY</span>
+
+            </div>
+
+        </div>
+
+        <div class="ai-box">
+
+            <h2>🤖 Smart Farming Insight</h2>
+
+            <p>
+                Your farm currently shows healthy conditions.
+                The best immediate action is to monitor soil moisture
+                and avoid unnecessary irrigation. Combining farm data
+                with weather information can improve water efficiency
+                and crop management.
+            </p>
+
+        </div>
+
+    </main>
+</div>
+
+</body>
+</html>

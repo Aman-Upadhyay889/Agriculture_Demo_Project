@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | The Root of Life</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="logo">🌱 The Root of Life</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="add-farm.html">Add Farm</a>
+    </nav>
+</header>
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <h3>Smart Farm</h3>
+
+        <a href="dashboard.html" class="side-active">📊 Dashboard</a>
+        <a href="add-farm.html">🌱 Add Farm</a>
+        <a href="irrigation.html">💧 Irrigation</a>
+        <a href="smart-advice.html">🤖 Smart Advice</a>
+        <a href="history.html">📈 History</a>
+
+        <div class="sidebar-bottom">
+            <p>🌍 Sustainable Farming</p>
+            <small>Grow smart. Grow green.</small>
+        </div>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <div class="welcome">
+            <div>
+                <p class="small-title">SMART AGRICULTURE</p>
+                <h1>Farm Dashboard</h1>
+                <p>Monitor your farm and make smarter decisions.</p>
+            </div>
+
+            <a href="add-farm.html" class="add-btn">+ Add Farm</a>
+        </div>
+
+        <!-- FARM SELECTOR -->
+        <div class="farm-selector">
+            <label>Select Farm</label>
+            <select>
+                <option>Green Valley Farm</option>
+                <option>Sunrise Farm</option>
+                <option>Root Life Farm</option>
+            </select>
+        </div>
+
+        <!-- STATS -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-icon">🌱</div>
+                <div>
+                    <p>Crop</p>
+                    <h2>Rice</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">💧</div>
+                <div>
+                    <p>Soil Moisture</p>
+                    <h2>68%</h2>
+                    <span class="good">Good</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">🌡️</div>
+                <div>
+                    <p>Temperature</p>
+                    <h2>27°C</h2>
+                    <span class="good">Normal</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">☁️</div>
+                <div>
+                    <p>Weather</p>
+                    <h2>Cloudy</h2>
+                    <span class="good">Favorable</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- MIDDLE SECTION -->
+        <section class="dashboard-grid">
+
+            <div class="panel">
+                <div class="panel-title">
+                    <h2>Farm Health</h2>
+                    <span class="status">● Healthy</span>
+                </div>
+
+                <div class="health-circle">
+                    <div>
+                        <strong>82%</strong>
+                        <span>Overall Health</span>
+                    </div>
+                </div>
+
+                <div class="health-details">
+                    <p><span>Soil condition</span><b>Good</b></p>
+                    <p><span>Water availability</span><b>Good</b></p>
+                    <p><span>Crop condition</span><b>Healthy</b></p>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-title">
+                    <h2>Today's Tasks</h2>
+                </div>
+
+                <div class="task completed">
+                    <span>✓</span>
+                    <div>
+                        <b>Check soil moisture</b>
+                        <small>Completed</small>
+                    </div>
+                </div>
+
+                <div class="task">
+                    <span>💧</span>
+                    <div>
+                        <b>Review irrigation</b>
+                        <small>Recommended at 6 PM</small>
+                    </div>
+                </div>
+
+                <div class="task">
+                    <span>🌱</span>
+                    <div>
+                        <b>Inspect rice crop</b>
+                        <small>Due today</small>
+                    </div>
+                </div>
+
+                <div class="task">
+                    <span>🤖</span>
+                    <div>
+                        <b>Check smart advice</b>
+                        <small>2 new recommendations</small>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- QUICK ACTIONS -->
+        <section class="panel">
+            <div class="panel-title">
+                <h2>Quick Actions</h2>
+            </div>
+
+            <div class="quick-actions">
+
+                <a href="add-farm.html">
+                    <span>🌱</span>
+                    <b>Add New Farm</b>
+                    <small>Register your farm</small>
+                </a>
+
+                <a href="irrigation.html">
+                    <span>💧</span>
+                    <b>Check Irrigation</b>
+                    <small>Manage water</small>
+                </a>
+
+                <a href="smart-advice.html">
+                    <span>🤖</span>
+                    <b>Smart Advice</b>
+                    <small>View recommendations</small>
+                </a>
+
+                <a href="history.html">
+                    <span>📈</span>
+                    <b>Farm History</b>
+                    <small>View previous data</small>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+</div>
+
+</body>
+</html>

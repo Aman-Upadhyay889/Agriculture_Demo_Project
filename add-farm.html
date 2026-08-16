@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Farm | The Root of Life</title>
+    <link rel="stylesheet" href="dashboard.css">
+
+    <style>
+        .form-container {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .form-box {
+            background: white;
+            padding: 35px;
+            border-radius: 14px;
+            border: 1px solid #e1e9df;
+        }
+
+        .form-section {
+            margin-bottom: 30px;
+        }
+
+        .form-section h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #238636;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccd8cc;
+            border-radius: 7px;
+            outline: none;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus {
+            border-color: #238636;
+        }
+
+        .submit-btn {
+            width: 100%;
+            border: none;
+            background: #238636;
+            color: white;
+            padding: 14px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #17672a;
+        }
+
+        .info-box {
+            background: #eef8eb;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            color: #35633c;
+        }
+
+        @media(max-width:600px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-box {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="logo">🌱 The Root of Life</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="add-farm.html" class="active">Add Farm</a>
+    </nav>
+</header>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar">
+        <h3>Smart Farm</h3>
+
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="add-farm.html" class="side-active">🌱 Add Farm</a>
+        <a href="irrigation.html">💧 Irrigation</a>
+        <a href="smart-advice.html">🤖 Smart Advice</a>
+        <a href="history.html">📈 History</a>
+    </aside>
+
+    <main class="main-content">
+
+        <div class="form-container">
+
+            <p class="small-title">FARM MANAGEMENT</p>
+            <h1>Add New Farm</h1>
+            <p style="color:#68746b; margin-bottom:25px;">
+                Add your farm details to start smart monitoring.
+            </p>
+
+            <div class="form-box">
+
+                <div class="info-box">
+                    🌱 Enter accurate information to receive better
+                    crop and irrigation recommendations.
+                </div>
+
+                <form>
+
+                    <div class="form-section">
+
+                        <h2>📍 Farm Information</h2>
+
+                        <div class="form-grid">
+
+                            <div class="input-group">
+                                <label>Farm Name</label>
+                                <input type="text"
+                                       placeholder="e.g. Green Valley Farm">
+                            </div>
+
+                            <div class="input-group">
+                                <label>Location</label>
+                                <input type="text"
+                                       placeholder="e.g. Bhubaneswar">
+                            </div>
+
+                            <div class="input-group">
+                                <label>Farm Area (acres)</label>
+                                <input type="number"
+                                       placeholder="e.g. 5">
+                            </div>
+
+                            <div class="input-group">
+                                <label>Soil Type</label>
+                                <select>
+                                    <option>Select soil type</option>
+                                    <option>Alluvial Soil</option>
+                                    <option>Black Soil</option>
+                                    <option>Red Soil</option>
+                                    <option>Loamy Soil</option>
+                                    <option>Sandy Soil</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-section">
+
+                        <h2>🌱 Crop Information</h2>
+
+                        <div class="form-grid">
+
+                            <div class="input-group">
+                                <label>Main Crop</label>
+
+                                <select>
+                                    <option>Select crop</option>
+                                    <option>Rice</option>
+                                    <option>Wheat</option>
+                                    <option>Maize</option>
+                                    <option>Potato</option>
+                                    <option>Tomato</option>
+                                    <option>Groundnut</option>
+                                    <option>Sunflower</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label>Growing Season</label>
+
+                                <select>
+                                    <option>Select season</option>
+                                    <option>Kharif</option>
+                                    <option>Rabi</option>
+                                    <option>Zaid</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label>Planting Date</label>
+                                <input type="date">
+                            </div>
+
+                            <div class="input-group">
+                                <label>Irrigation Method</label>
+
+                                <select>
+                                    <option>Select method</option>
+                                    <option>Drip Irrigation</option>
+                                    <option>Sprinkler</option>
+                                    <option>Flood Irrigation</option>
+                                    <option>Rainfed</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button type="button" class="submit-btn">
+                        🌱 Add Farm
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
