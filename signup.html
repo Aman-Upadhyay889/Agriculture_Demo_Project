@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | The Root of Life</title>
+
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+
+    <!-- BACK TO HOME -->
+
+    <a href="index.html" class="back-home">
+        ← Back to Home
+    </a>
+
+
+    <!-- SIGNUP CONTAINER -->
+
+    <div class="signup-container">
+
+        <!-- LEFT SIDE -->
+
+        <div class="signup-info">
+
+            <div class="logo">
+                🌱 The Root of Life
+            </div>
+
+            <p class="tagline">
+                SMART AGRICULTURE • SMART FUTURE
+            </p>
+
+            <h1>
+                Grow Smarter.<br>
+                Farm Better.
+            </h1>
+
+            <p class="description">
+                Create your account and bring your farm into
+                the world of smart agriculture.
+            </p>
+
+
+            <div class="benefits">
+
+                <div class="benefit">
+                    <span>🌱</span>
+                    <div>
+                        <h3>Smart Farm Management</h3>
+                        <p>Manage your farm information easily.</p>
+                    </div>
+                </div>
+
+
+                <div class="benefit">
+                    <span>💧</span>
+                    <div>
+                        <h3>Smart Irrigation</h3>
+                        <p>Make better water management decisions.</p>
+                    </div>
+                </div>
+
+
+                <div class="benefit">
+                    <span>🤖</span>
+                    <div>
+                        <h3>AI-Powered Advice</h3>
+                        <p>Get useful recommendations for your crops.</p>
+                    </div>
+                </div>
+
+
+                <div class="benefit">
+                    <span>📊</span>
+                    <div>
+                        <h3>Farm Analytics</h3>
+                        <p>Track your farm history and performance.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="signup-box">
+
+            <div class="form-header">
+
+                <div class="form-icon">
+                    👤
+                </div>
+
+                <h2>
+                    Create New Account
+                </h2>
+
+                <p>
+                    Join The Root of Life today
+                </p>
+
+            </div>
+
+
+            <!-- SIGNUP FORM -->
+
+            <form id="signupForm">
+
+
+                <!-- FULL NAME -->
+
+                <div class="input-group">
+
+                    <label for="fullName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="input-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="input-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        maxlength="10"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- USER TYPE -->
+
+                <div class="input-group">
+
+                    <label for="userType">
+                        I am a
+                    </label>
+
+                    <select
+                        id="userType"
+                        name="userType"
+                        required
+                    >
+
+                        <option value="">
+                            Select user type
+                        </option>
+
+                        <option value="farmer">
+                            👨‍🌾 Farmer
+                        </option>
+
+                        <option value="student">
+                            🎓 Student
+                        </option>
+
+                        <option value="agriculture_professional">
+                            🌾 Agriculture Professional
+                        </option>
+
+                        <option value="other">
+                            👤 Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="input-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="show-password"
+                            onclick="togglePassword('password', this)"
+                        >
+                            👁️
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="input-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Confirm your password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="show-password"
+                            onclick="togglePassword('confirmPassword', this)"
+                        >
+                            👁️
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TERMS -->
+
+                <div class="terms">
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            required
+                        >
+
+                        <span>
+                            I agree to the
+                            <a href="#">Terms & Conditions</a>
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- CREATE ACCOUNT BUTTON -->
+
+                <button
+                    type="submit"
+                    class="create-btn"
+                >
+                    🌱 Create Account
+                </button>
+
+
+            </form>
+
+
+            <!-- LOGIN -->
+
+            <div class="login-link">
+
+                Already have an account?
+
+                <a href="login.html">
+                    🔐 Login
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        🌱 The Root of Life
+
+        <span>•</span>
+
+        Smart Agriculture for a Sustainable Future
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        /* SHOW / HIDE PASSWORD */
+
+        function togglePassword(inputId, button) {
+
+            const input = document.getElementById(inputId);
+
+            if (input.type === "password") {
+
+                input.type = "text";
+
+                button.textContent = "🙈";
+
+            } else {
+
+                input.type = "password";
+
+                button.textContent = "👁️";
+
+            }
+
+        }
+
+
+        /* PASSWORD VALIDATION */
+
+        document
+            .getElementById("signupForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                const password =
+                    document.getElementById("password").value;
+
+                const confirmPassword =
+                    document.getElementById("confirmPassword").value;
+
+
+                if (password.length < 6) {
+
+                    alert(
+                        "Password must be at least 6 characters long."
+                    );
+
+                    return;
+
+                }
+
+
+                if (password !== confirmPassword) {
+
+                    alert(
+                        "Password and Confirm Password do not match."
+                    );
+
+                    return;
+
+                }
+
+
+                /*
+                 * DATABASE CONNECTION WILL BE ADDED HERE.
+                 *
+                 * After we create the backend,
+                 * this form will send the user's details
+                 * to MySQL.
+                 */
+
+
+                alert(
+                    "Account form is ready! Database connection will be added next."
+                );
+
+            });
+
+    </script>
+
+</body>
+
+</html>
