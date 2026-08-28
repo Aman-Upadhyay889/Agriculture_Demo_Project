@@ -15,7 +15,9 @@ body {
     line-height: 1.6;
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 
 header {
     height: 70px;
@@ -38,20 +40,49 @@ header {
 
 nav {
     display: flex;
-    gap: 30px;
+    gap: 25px;
+    align-items: center;
 }
 
 nav a {
     text-decoration: none;
     color: #294832;
     font-weight: 600;
+    transition: 0.2s;
 }
 
 nav a:hover {
     color: #238636;
 }
 
-/* HERO */
+/* SIGN IN */
+
+.auth-link {
+    padding: 8px 4px;
+}
+
+.auth-link:hover {
+    color: #238636;
+}
+
+/* LOGIN BUTTON */
+
+.login-btn {
+    background: #238636;
+    color: white !important;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.login-btn:hover {
+    background: #17672a;
+    color: white !important;
+}
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
     min-height: 650px;
@@ -92,6 +123,10 @@ h2 span {
     max-width: 600px;
 }
 
+/* =========================
+   BUTTONS
+========================= */
+
 .buttons {
     margin-top: 30px;
     display: flex;
@@ -104,6 +139,7 @@ h2 span {
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.2s;
 }
 
 .primary {
@@ -120,7 +156,14 @@ h2 span {
     color: #238636;
 }
 
-/* HERO VISUAL */
+.secondary:hover {
+    background: #238636;
+    color: white;
+}
+
+/* =========================
+   HERO VISUAL
+========================= */
 
 .hero-visual {
     width: 350px;
@@ -141,7 +184,9 @@ h2 span {
     font-size: 55px;
 }
 
-/* GENERAL SECTIONS */
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
 .root-section,
 .crops-section,
@@ -166,7 +211,9 @@ h2 {
     color: #5d6b60;
 }
 
-/* ROOT CARDS */
+/* =========================
+   ROOT CARDS
+========================= */
 
 .root-cards {
     display: grid;
@@ -178,6 +225,11 @@ h2 {
     padding: 25px;
     background: #f3f8f1;
     border-radius: 12px;
+    transition: 0.2s;
+}
+
+.root-card:hover {
+    transform: translateY(-5px);
 }
 
 .root-card span {
@@ -188,7 +240,9 @@ h2 {
     margin: 10px 0;
 }
 
-/* CROPS */
+/* =========================
+   CROPS
+========================= */
 
 .crops-section {
     background: #f7faf6;
@@ -247,7 +301,9 @@ h2 {
     font-weight: bold;
 }
 
-/* SMART SECTION */
+/* =========================
+   SMART AGRICULTURE
+========================= */
 
 .smart-section {
     background: white;
@@ -266,6 +322,12 @@ h2 {
     padding: 30px 20px;
     border: 1px solid #e3ebe1;
     border-radius: 14px;
+    transition: 0.2s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(30, 80, 35, 0.08);
 }
 
 .feature div {
@@ -282,7 +344,9 @@ h2 {
     font-size: 14px;
 }
 
-/* CTA */
+/* =========================
+   CTA
+========================= */
 
 .cta {
     text-align: center;
@@ -299,7 +363,9 @@ h2 {
     color: #617064;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     text-align: center;
@@ -317,7 +383,9 @@ footer p {
     font-size: 14px;
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width: 900px) {
 
@@ -344,6 +412,10 @@ footer p {
     }
 }
 
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 600px) {
 
     header {
@@ -356,6 +428,10 @@ footer p {
 
     nav a {
         font-size: 13px;
+    }
+
+    .login-btn {
+        padding: 8px 12px;
     }
 
     .hero {
@@ -389,5 +465,16 @@ footer p {
 
     h2 {
         font-size: 32px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
     }
 }
